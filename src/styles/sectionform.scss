@@ -1,0 +1,128 @@
+.section_form {
+  margin-top: 380px;
+  text-align: center;
+  background-color: #fefefe;
+  color: #0d0d2b;
+  position: relative;
+
+  h2 {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 150%;
+    color: #fff;
+  }
+  p {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+    margin-bottom: 30px;
+  }
+  .section_translate {
+    position: relative;
+    transform: translateY(-280px);
+    .formcard {
+      width: max(65vw, 380px);
+      margin: 0 auto;
+      min-height: 216px;
+      margin-bottom: 100px;
+      .card {
+        padding: 48px;
+        form {
+          @include Flex;
+          // justify-content: center;
+          gap: 48px;
+          margin-bottom: 80px;
+          input {
+            width: min(80%, 403px);
+            padding: 10px;
+          }
+          select {
+            width: min(80%, 203px);
+            padding: 10px;
+          }
+        }
+      }
+      .highlight {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 150%;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        text-align: start;
+        color: #3671e9;
+        margin: 0;
+      }
+      h3 {
+        text-align: start;
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 150%;
+        color: #0d0d2b;
+        span {
+          color: #3671e9;
+        }
+      }
+      input,
+      select {
+        border: none;
+        outline: none;
+        border-bottom: 1px solid #e0e0e0;
+      }
+    }
+
+    h2 {
+      width: 60%;
+      margin: 20px auto;
+    }
+    .text {
+      width: max(35vw, 380px);
+      margin: 24px auto;
+      font-weight: 400;
+      font-size: 18px;
+      color: #e0e0e0;
+    }
+  }
+
+  .cards {
+    @include Flex;
+    justify-content: center;
+    gap: 80px;
+    flex-wrap: wrap;
+    .card {
+      width: 260px;
+      @include Flex;
+      flex-direction: column;
+      gap: 24px;
+      height: 433px;
+      padding: 48px;
+      h3 {
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 150%;
+        span {
+          font-weight: 500;
+          font-size: 18px;
+          line-height: 150%;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  .section_form {
+    .section_translate {
+      .formcard {
+        .card {
+          padding: 20px;
+          form {
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            input {
+            }
+          }
+        }
+      }
+    }
+  }
+}

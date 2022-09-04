@@ -1,0 +1,130 @@
+.navigation {
+  max-width: 1202px;
+  margin: 0px auto;
+  padding-inline: 10px;
+  nav {
+    @include Flex;
+    padding: 60px 0px;
+    justify-content: space-between;
+    ul {
+      @include Flex;
+      gap: 32px;
+      a {
+        font-family: "Rubik";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 28px;
+        letter-spacing: 0.01em;
+      }
+      .login {
+        margin-left: 23px;
+        padding-right: 24px;
+        border-right: 1px solid #f2f2f2;
+        display: inline-block;
+      }
+      .register {
+        padding: 14px 32px;
+        width: 130px;
+        height: 52px;
+        background: #3671e9;
+        border-radius: 32px;
+        margin-left: 24px;
+      }
+    }
+  }
+  .menu {
+    display: none;
+  }
+  .first,
+  .middle,
+  .last {
+    background-color: #fff;
+    height: 4px;
+    border-radius: 50px;
+    box-shadow: 0px 0.4px 0.8px rgba(255, 255, 255, 0.3);
+    transition: all 500ms ease-in-out;
+    width: 24px;
+  }
+  .menu-open .first {
+    transform: translateY(7px) rotate(45deg);
+  }
+  .menu-open .middle {
+    width: 0px;
+  }
+  .menu-open .last {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+  .mobile-navigation-logo {
+    display: none;
+  }
+}
+@media (max-width: 780px) {
+  .navigation {
+    position: relative;
+    height: 71px;
+
+    .menu {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      transition: all 500ms ease-in-out;
+      cursor: pointer;
+      height: 18px;
+      width: 24px;
+      justify-content: space-between;
+      //   change this to fixed if u want it to stay
+      position: absolute;
+      right: 36px;
+      top: 24px;
+      z-index: 100;
+    }
+    .mobile-navigation-logo {
+      display: block;
+      position: fixed;
+      left: 0px;
+      top: 0px;
+      z-index: 2;
+      width: 100vw;
+      padding: 16px 24px;
+    }
+    .logo {
+      display: none;
+    }
+  }
+  .navigation nav {
+    position: fixed;
+    inset: 0;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(100%);
+    padding: 40px;
+    opacity: 0;
+    transition: all 350ms;
+    z-index: 10;
+    background-color: #252540;
+    .profile {
+      display: none;
+    }
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 37px;
+      a {
+        font-size: 24px;
+      }
+    }
+    .navigation-account {
+      display: block;
+    }
+  }
+
+  nav[data-visible="true"] {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}

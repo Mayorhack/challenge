@@ -1,0 +1,63 @@
+.section_why {
+  max-width: 1202px;
+  margin: 0 auto;
+  margin-block: 60px;
+  padding-inline: 10px;
+  h2 {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 150%;
+  }
+  p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    color: #e0e0e0;
+  }
+  .numbers {
+    @include Flex;
+    justify-content: center;
+    .number {
+      width: 100%;
+      @include Flex;
+      justify-content: space-around;
+      width: 280px;
+    }
+  }
+  .section_flex {
+    @include Flex;
+    justify-content: space-between;
+    .section_why_text {
+      @include Flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 24px;
+      flex: 1;
+    }
+    .section_why_image {
+      flex: 1.5;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  .section_why {
+    .numbers {
+      flex-direction: column;
+
+      margin: 50px 0;
+      gap: 50px;
+      .number {
+        padding: 10px;
+      }
+    }
+    .section_flex {
+      flex-direction: column-reverse;
+      .section_why_image {
+      }
+    }
+  }
+}

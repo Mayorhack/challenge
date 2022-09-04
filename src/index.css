@@ -1,0 +1,22 @@
+html {
+  font-size: 62.5%;
+}
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: #0d0d2b;
+  color: #fff;
+}
+
+li {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+}
