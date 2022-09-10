@@ -5,7 +5,7 @@ import bitcoin from "../assests/bitcoin.svg";
 import Ethereum from "../assests/Ethereum.svg";
 import Litecoin from "../assests/Litecoin.svg";
 
-import { AttentionSeeker, Bounce } from "react-awesome-reveal";
+import { AttentionSeeker, Bounce, Zoom } from "react-awesome-reveal";
 
 const SectionForm = () => {
   const [active, setactive] = useState({
@@ -24,7 +24,7 @@ const SectionForm = () => {
           Let's check your hash rate to see how much you will earn today,
           Exercitation veniam consequat sunt nostrud amet.
         </p>
-        <Bounce>
+        <Zoom>
           <div className="formcard">
             <Card
               children={
@@ -52,12 +52,12 @@ const SectionForm = () => {
               }
             />
           </div>
-        </Bounce>
-        <AttentionSeeker effect="rubberBand">
+        </Zoom>
+        <Zoom>
           <h2 className="dark">
             Trade securely and market the high growth cryptocurrencies.
           </h2>
-        </AttentionSeeker>
+        </Zoom>
 
         <div className="cards">
           {[
@@ -97,23 +97,21 @@ const SectionForm = () => {
                 }}
                 key={id}
               >
-                <AttentionSeeker effect="pulse">
-                  <Card
-                    children={
-                      <>
-                        <img src={item.icon} alt={item.title} />
-                        <h3>
-                          {item.title} <span>{item.sym}</span>
-                        </h3>
-                        <p>{item.p}</p>
-                        <Button
-                          text={active[item.title] ? "Start mining" : null}
-                          logo=">"
-                        />
-                      </>
-                    }
-                  />
-                </AttentionSeeker>
+                <Card
+                  children={
+                    <>
+                      <img src={item.icon} alt={item.title} />
+                      <h3>
+                        {item.title} <span>{item.sym}</span>
+                      </h3>
+                      <p>{item.p}</p>
+                      <Button
+                        text={active[item.title] ? "Start mining" : null}
+                        logo=">"
+                      />
+                    </>
+                  }
+                />
               </div>
             );
           })}

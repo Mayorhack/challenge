@@ -135,7 +135,7 @@
         background: #2b076e;
         backdrop-filter: blur(250px);
         color: #fff;
-        transition: all 100ms ease-out;
+        animation: headShake 1s;
       }
       .button {
         background-color: #3671e9;
@@ -143,7 +143,6 @@
           width: 32px;
           height: 32px;
           font-size: 24px;
-
           // border: 2px solid rgba(43, 7, 110, 0.2);
         }
       }
