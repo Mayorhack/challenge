@@ -11,8 +11,8 @@ const Header = () => {
 
   return (
     <div className="header" ref={ref}>
-      <Slide>
-        <div className="header_text ">
+      <div className="header_text ">
+        <Slide>
           <div className="save">
             <p
               className={inView ? "text_save translate-X_mobile" : "text_save"}
@@ -27,8 +27,8 @@ const Header = () => {
             billion in transactions.
           </p>
           <Button text="Try for FREE" logo=">" inView={inView} />
-        </div>
-      </Slide>
+        </Slide>
+      </div>
       <Zoom>
         <div className="header_image">
           <img src={headerImage} alt="" />
