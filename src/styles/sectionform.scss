@@ -4,7 +4,7 @@
   background-color: #f0f0f0;
   color: #0d0d2b;
   position: relative;
-  height: 1200px;
+  height: min(1200px, 100%);
 
   h2 {
     font-weight: 700;
