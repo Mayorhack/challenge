@@ -3,6 +3,8 @@
 @import "./header.scss";
 @import "./sectionwhy.scss";
 @import "./sectionform.scss";
+@import "./portfolio.scss";
+@import "./footer.scss";
 .App {
   overflow-x: hidden;
   .button {
@@ -13,6 +15,25 @@
     outline: none;
     border: none;
     color: #fff;
+    @include Flex;
+    span {
+      border-radius: 50%;
+      background-color: #fff;
+      color: #3671e9;
+      font-size: 16px;
+      width: 32px;
+      aspect-ratio: 1;
+      display: inline-block;
+      font-weight: 600;
+      @include Flex;
+      justify-content: center;
+    }
+  }
+  .button:hover,
+  .button:active {
+    background-color: #f0f0f0;
+    color: #3671e9;
+    transform: scale(0.95);
   }
   .card {
     background-color: #fff;
@@ -21,5 +42,51 @@
 
     border-radius: 16px;
     border: none;
+  }
+}
+.translateX {
+  animation: translat 500ms ease-in-out;
+}
+.translateX_button {
+  animation: translat 1000ms ease-in-out 500ms;
+}
+.translate-X {
+  animation: translat-neg 500ms ease-in-out;
+}
+
+.resize {
+  animation: resize 1000ms ease-out;
+}
+
+@keyframes translat {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+@keyframes translat-neg {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes resize {
+  0% {
+    transform: scale(0.01);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
   }
 }

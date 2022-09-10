@@ -9,6 +9,12 @@
     ul {
       @include Flex;
       gap: 32px;
+      li:hover {
+        animation: flip 1s;
+      }
+      .account:hover {
+        animation: none;
+      }
       a {
         font-family: "Rubik";
         font-style: normal;
@@ -16,7 +22,10 @@
         font-size: 16px;
         line-height: 28px;
         letter-spacing: 0.01em;
+
+        position: relative;
       }
+
       .login {
         margin-left: 23px;
         padding-right: 24px;
@@ -69,14 +78,14 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      position: relative;
+      position: fixed;
       transition: all 500ms ease-in-out;
       cursor: pointer;
       height: 18px;
       width: 24px;
       justify-content: space-between;
       //   change this to fixed if u want it to stay
-      position: absolute;
+
       right: 36px;
       top: 24px;
       z-index: 100;
@@ -89,6 +98,8 @@
       z-index: 2;
       width: 100vw;
       padding: 16px 24px;
+      background-color: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(32px);
     }
     .logo {
       display: none;

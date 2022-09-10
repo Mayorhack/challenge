@@ -1,7 +1,10 @@
+import Footer from "./layout/Footer";
 import Header from "./layout/Header";
 import Navbar from "./layout/Navbar";
+import Portfolio from "./layout/Portfolio";
 import SectionForm from "./layout/SectionForm";
 import SectionWhy from "./layout/SectionWhy";
+
 import "./styles/app.scss";
 
 function App() {
@@ -11,6 +14,8 @@ function App() {
       <Header />
       <SectionWhy />
       <SectionForm />
+      <Portfolio />
+      <Footer />
     </div>
   );
 }

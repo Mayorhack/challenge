@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import logo from "../assests/Logo.svg";
+import "animate.css";
 
 const Navbar = () => {
-  const [openMenu, setOpenMenu] = useState(true);
+  const [openMenu, setOpenMenu] = useState(false);
   const handleClick = function (e) {
     e.target.closest(
       ".menu"
@@ -28,7 +29,7 @@ const Navbar = () => {
           <li>
             <a href="">Contact</a>
           </li>
-          <li>
+          <li className="account">
             <a href="" className="login">
               Login
             </a>

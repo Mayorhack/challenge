@@ -1,15 +1,16 @@
 .section_form {
   margin-top: 380px;
   text-align: center;
-  background-color: #fefefe;
+  background-color: #f0f0f0;
   color: #0d0d2b;
   position: relative;
+  height: 1200px;
 
   h2 {
     font-weight: 700;
     font-size: 40px;
     line-height: 150%;
-    color: #fff;
+    // color: #fff;
   }
   p {
     font-weight: 400;
@@ -18,13 +19,23 @@
     margin-bottom: 30px;
   }
   .section_translate {
-    position: relative;
+    // position: relative;
     transform: translateY(-280px);
+    .dark {
+      color: #0d0d2b;
+      margin-block: 100px;
+    }
+    h2 {
+      font-weight: 700;
+      font-size: 40px;
+      line-height: 150%;
+      color: #fff;
+    }
     .formcard {
-      width: max(65vw, 380px);
+      width: max(65vw, 360px);
       margin: 0 auto;
       min-height: 216px;
-      margin-bottom: 100px;
+
       .card {
         padding: 48px;
         form {
@@ -88,12 +99,15 @@
     justify-content: center;
     gap: 80px;
     flex-wrap: wrap;
+
     .card {
       width: 260px;
+      cursor: pointer;
       @include Flex;
       flex-direction: column;
-      gap: 24px;
-      height: 433px;
+      // gap: 24px;
+      justify-content: space-around;
+      height: 400px;
       padding: 48px;
       h3 {
         font-weight: 700;
@@ -105,12 +119,47 @@
           line-height: 150%;
         }
       }
+      .button {
+        background-color: #fff;
+        span {
+          width: 64px;
+          height: 64px;
+          font-size: 32px;
+
+          border: 2px solid rgba(43, 7, 110, 0.2);
+        }
+      }
+    }
+    .new {
+      .card {
+        background: #2b076e;
+        backdrop-filter: blur(250px);
+        color: #fff;
+        transition: all 100ms ease-out;
+      }
+      .button {
+        background-color: #3671e9;
+        span {
+          width: 32px;
+          height: 32px;
+          font-size: 24px;
+
+          // border: 2px solid rgba(43, 7, 110, 0.2);
+        }
+      }
     }
   }
 }
 @media (max-width: 768px) {
   .section_form {
+    padding: 10px;
+    height: 100%;
     .section_translate {
+      transform: translateY(-400px);
+      .dark {
+        width: 100%;
+        margin-block: 50px;
+      }
       .formcard {
         .card {
           padding: 20px;
@@ -118,8 +167,6 @@
             flex-direction: column;
             align-items: flex-start;
             justify-content: flex-start;
-            input {
-            }
           }
         }
       }

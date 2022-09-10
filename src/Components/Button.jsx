@@ -1,9 +1,12 @@
 import React from "react";
 
-const Button = ({ text, logo }) => {
+const Button = ({ text, logo, inView }) => {
   return (
     <button className="button">
-      {text} <span>{logo}</span>
+      {text}{" "}
+      {logo && (
+        <span className={inView ? "translateX_button" : ""}>{logo}</span>
+      )}
     </button>
   );
 };
