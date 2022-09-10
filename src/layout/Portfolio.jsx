@@ -4,16 +4,9 @@ import stat from "../assests/Statistic.svg";
 import table from "../assests/Table.svg";
 import Button from "../Components/Button";
 import Card from "../Components/Card";
-import { useInView } from "react-intersection-observer";
 import { AttentionSeeker, Slide, Zoom } from "react-awesome-reveal";
 
 const Portfolio = () => {
-  const { ref, inView, entry } = useInView({
-    root: null,
-    rootMargin: "-300px 0px -300px 0px",
-    threshold: 0,
-  });
-  console.log(entry);
   return (
     <>
       <div className="portfolio">
@@ -25,7 +18,7 @@ const Portfolio = () => {
             </h2>
           </AttentionSeeker>
 
-          <div className="details" ref={ref}>
+          <div className="details">
             {[
               {
                 title: "Invest Smart",
@@ -56,13 +49,7 @@ const Portfolio = () => {
                     </div>
                   </Slide>
                   <Slide>
-                    <div
-                      className={
-                        inView
-                          ? "portfolio_image  translate-X"
-                          : "portfolio_image"
-                      }
-                    >
+                    <div className={"portfolio_image"}>
                       <img src={item.picture} alt="" />
                     </div>
                   </Slide>

@@ -4,22 +4,17 @@ import Card from "../Components/Card";
 import bitcoin from "../assests/bitcoin.svg";
 import Ethereum from "../assests/Ethereum.svg";
 import Litecoin from "../assests/Litecoin.svg";
-import { useInView } from "react-intersection-observer";
+
 import { AttentionSeeker, Bounce } from "react-awesome-reveal";
 
 const SectionForm = () => {
-  const { ref, inView } = useInView({
-    /* Optional options */
-    root: null,
-    threshold: 0,
-  });
   const [active, setactive] = useState({
     Bitcoin: false,
     Ethereum: false,
     Litecoin: false,
   });
   return (
-    <div className="section_form" ref={ref}>
+    <div className="section_form">
       <div className="section_translate">
         <AttentionSeeker effect="jello">
           <h2>Check how much you can earn</h2>

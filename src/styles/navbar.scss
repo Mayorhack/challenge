@@ -2,9 +2,10 @@
   max-width: 1202px;
   margin: 0px auto;
   padding-inline: 10px;
+  margin-bottom: 2s0px;
   nav {
     @include Flex;
-    padding: 60px 0px;
+    padding: 30px 0px;
     justify-content: space-between;
     ul {
       @include Flex;

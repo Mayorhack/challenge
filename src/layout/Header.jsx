@@ -14,7 +14,9 @@ const Header = () => {
       <Slide>
         <div className="header_text ">
           <div className="save">
-            <p className={inView ? "text_save translate-X" : "text_save"}>
+            <p
+              className={inView ? "text_save translate-X_mobile" : "text_save"}
+            >
               75% SAVE
             </p>
             <p>For the Black Friday weekend</p>

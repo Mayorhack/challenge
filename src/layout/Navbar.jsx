@@ -18,19 +18,19 @@ const Navbar = () => {
         </div>
         <ul>
           <li>
-            <a href="">Products</a>
+            <a href="/">Products</a>
           </li>
           <li>
-            <a href="">Features</a>
+            <a href="/">Features</a>
           </li>
           <li>
-            <a href="">About</a>
+            <a href="/">About</a>
           </li>
           <li>
-            <a href="">Contact</a>
+            <a href="/">Contact</a>
           </li>
           <li className="account">
-            <a href="" className="login">
+            <a href="/" className="login">
               Login
             </a>
             <a href="" className="register">

@@ -59,21 +59,6 @@
     flex: 1;
   }
 }
-// .header::after {
-//   content: "";
-//   position: absolute;
-//   width: 120px;
-//   height: 997.88px;
-//   right: -100px;
-//   top: 0;
-//   background-image: linear-gradient(
-//     180deg,
-//     rgba(255, 255, 255, 0.04) 34.75%,
-//     rgba(255, 255, 255, 0.01) 100%
-//   );
-//   transform: rotate(-120deg);
-//   z-index: -1;
-// }
 .header::before {
   position: absolute;
   content: "";

@@ -8,7 +8,7 @@ import { useInView } from "react-intersection-observer";
 import { Roll } from "react-awesome-reveal";
 
 const SectionWhy = () => {
-  const { ref, inView, entry } = useInView({
+  const { ref, inView } = useInView({
     /* Optional options */
     root: null,
     rootMargin: "-100px",

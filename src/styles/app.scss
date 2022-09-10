@@ -53,6 +53,9 @@
 .translate-X {
   animation: translat-neg 500ms ease-in-out;
 }
+.translate-X_mobile {
+  animation: translat-neg 1000ms ease-in-out 500ms;
+}
 
 .resize {
   animation: resize 1000ms ease-out;
