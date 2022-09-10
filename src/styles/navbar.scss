@@ -13,6 +13,14 @@
       li:hover {
         animation: flip 1s;
       }
+      .account {
+        @media (max-width: 767px) {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 24px;
+        }
+      }
       .account:hover {
         animation: none;
       }
@@ -32,6 +40,12 @@
         padding-right: 24px;
         border-right: 1px solid #f2f2f2;
         display: inline-block;
+        @media (max-width: 768px) {
+          display: block;
+          border: none;
+          padding: 0;
+          margin: 0;
+        }
       }
       .register {
         padding: 14px 32px;
@@ -40,6 +54,12 @@
         background: #3671e9;
         border-radius: 32px;
         margin-left: 24px;
+        @media (max-width: 768px) {
+          @include Flex;
+          justify-content: center;
+
+          margin: 0;
+        }
       }
     }
   }
